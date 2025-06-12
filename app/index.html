@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学术论文Markdown转换器</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-section">
+        <h1>学术论文Markdown转换器</h1>
+
+        <div class="tab-container">
+          <div class="tab-buttons">
+            <button class="tab-button active" onclick="switchTab('markdown')">
+              Markdown
+            </button>
+            <button class="tab-button" onclick="switchTab('css')">
+              CSS样式
+            </button>
+          </div>
+
+          <div id="markdownTab" class="tab-content active">
+            <h2>Markdown内容</h2>
+            <textarea
+              id="markdownInput"
+              placeholder="在此粘贴您的Markdown内容..."
+            ></textarea>
+
+            <div class="button-group">
+              <label for="markdownFile" class="file-label"
+                >上传Markdown文件</label
+              >
+              <input
+                type="file"
+                id="markdownFile"
+                class="file-input"
+                accept=".md,.txt"
+              />
+              <button onclick="loadSampleMarkdown()">加载示例</button>
+              <button onclick="clearMarkdown()" class="secondary">清空</button>
+            </div>
+          </div>
+
+          <div id="cssTab" class="tab-content">
+            <h2>CSS样式</h2>
+            <textarea
+              id="cssInput"
+              placeholder="在此粘贴您的CSS样式..."
+            ></textarea>
+
+            <div class="button-group">
+              <label for="cssFile" class="file-label">上传CSS文件</label>
+              <input
+                type="file"
+                id="cssFile"
+                class="file-input"
+                accept=".css"
+              />
+              <button onclick="loadDefaultCSS()">加载默认样式</button>
+              <button onclick="clearCSS()" class="secondary">清空</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button onclick="renderPreview()">渲染预览</button>
+          <button onclick="downloadWord()">下载Word文档</button>
+        </div>
+      </div>
+
+      <div class="output-section">
+        <h2>预览结果</h2>
+        <div id="previewContent"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
