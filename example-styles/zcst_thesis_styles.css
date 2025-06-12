@@ -2,241 +2,242 @@
 
 /* 页面设置 */
 @page {
-    size: A4;
-    margin-top: 2.5cm;
-    margin-bottom: 2.5cm;
-    margin-left: 3cm; /* 左边距2.5cm + 装订线0.5cm */
-    margin-right: 2.5cm;
+  size: A4;
+  margin-top: 2.5cm;
+  margin-bottom: 2.5cm;
+  margin-left: 3cm; /* 左边距2.5cm + 装订线0.5cm */
+  margin-right: 2.5cm;
 }
 
 /* 文档容器 */
 .document-container {
-    max-width: 21cm;
-    margin: 0 auto;
-    padding: 2.5cm 2.5cm 2.5cm 3cm; /* 对应页边距设置 */
-    background: white;
-    font-family: "SimSun", "Times New Roman", serif;
-    line-height: 1.25; /* 全文1.25倍行距 */
+  max-width: 21cm;
+  margin: 0 auto;
+  padding: 2.5cm 2.5cm 2.5cm 3cm; /* 对应页边距设置 */
+  background: white;
+  font-family: "SimSun", "Times New Roman", serif;
+  line-height: 125%; /* 全文1.25倍行距 */
 }
 
 /* 基础字体设置 */
-body, .document-container {
-    font-family: "SimSun", "Times New Roman", serif; /* 中文宋体，英文Times New Roman */
-    color: #000;
+body,
+.document-container {
+  font-family: "SimSun", "Times New Roman", serif; /* 中文宋体，英文Times New Roman */
+  color: #000;
 }
 
 /* 一级标题格式 */
 .heading-1 {
-    font-family: "Microsoft YaHei", "SimHei", sans-serif; /* 黑体 */
-    font-size: 16pt; /* 三号字体 */
-    font-weight: bold;
-    text-align: center; /* 居中 */
-    margin-top: 1em; /* 段前一行 */
-    margin-bottom: 1em; /* 段后一行 */
-    line-height: 1.25;
-    page-break-before: always; /* 每章节单独一页 */
-    page-break-after: avoid; /* 避免标题后分页 */
+  font-family: "Microsoft YaHei", "SimHei", sans-serif; /* 黑体 */
+  font-size: 16pt; /* 三号字体 */
+  font-weight: bold;
+  text-align: center; /* 居中 */
+  margin-top: 1em; /* 段前一行 */
+  margin-bottom: 1em; /* 段后一行 */
+  line-height: 125%;
+  page-break-before: always; /* 每章节单独一页 */
+  page-break-after: avoid; /* 避免标题后分页 */
 }
 
 /* 一级标题两字特殊处理 */
 .heading-1.two-chars {
-    letter-spacing: 2em; /* 两字中间空两格 */
-    text-indent: 1em; /* 调整整体居中 */
+  letter-spacing: 2em; /* 两字中间空两格 */
+  text-indent: 1em; /* 调整整体居中 */
 }
 
 /* 二级标题格式 */
 .heading-2 {
-    font-family: "Microsoft YaHei", "SimHei", sans-serif; /* 黑体 */
-    font-size: 15pt; /* 小三号字体 */
-    font-weight: bold;
-    text-align: left; /* 左对齐 */
-    margin-top: 1em; /* 段前一行 */
-    margin-bottom: 1em; /* 段后一行 */
-    line-height: 1.25;
-    page-break-after: avoid;
+  font-family: "Microsoft YaHei", "SimHei", sans-serif; /* 黑体 */
+  font-size: 15pt; /* 小三号字体 */
+  font-weight: bold;
+  text-align: left; /* 左对齐 */
+  margin-top: 1em; /* 段前一行 */
+  margin-bottom: 1em; /* 段后一行 */
+  line-height: 125%;
+  page-break-after: avoid;
 }
 
 /* 三级标题格式 */
 .heading-3 {
-    font-family: "Microsoft YaHei", "SimHei", sans-serif; /* 黑体 */
-    font-size: 14pt; /* 四号字体 */
-    font-weight: bold;
-    text-align: left; /* 左对齐 */
-    margin-top: 1em; /* 段前一行 */
-    margin-bottom: 1em; /* 段后一行 */
-    line-height: 1.25;
-    page-break-after: avoid;
+  font-family: "Microsoft YaHei", "SimHei", sans-serif; /* 黑体 */
+  font-size: 14pt; /* 四号字体 */
+  font-weight: bold;
+  text-align: left; /* 左对齐 */
+  margin-top: 1em; /* 段前一行 */
+  margin-bottom: 1em; /* 段后一行 */
+  line-height: 125%;
+  page-break-after: avoid;
 }
 
 /* 正文格式 */
 .paragraph {
-    font-family: "SimSun", "Times New Roman", serif; /* 宋体 */
-    font-size: 12pt; /* 小四号字体 */
-    font-weight: normal;
-    text-align: justify; /* 两端对齐 */
-    text-indent: 2em; /* 首行缩进2字符 */
-    line-height: 1.25; /* 1.25倍行距 */
-    margin-top: 0; /* 段前：0 */
-    margin-bottom: 0; /* 段后：0 */
+  font-family: "SimSun", "Times New Roman", serif; /* 宋体 */
+  font-size: 12pt; /* 小四号字体 */
+  font-weight: normal;
+  text-align: justify; /* 两端对齐 */
+  text-indent: 2em; /* 首行缩进2字符 */
+  line-height: 125%; /* 1.25倍行距 */
+  margin-top: 0; /* 段前：0 */
+  margin-bottom: 0; /* 段后：0 */
 }
 
 /* 标题编号样式 */
 .heading-number {
-    margin-right: 0.5em; /* 序数后半角空一格 */
+  margin-right: 0.5em; /* 序数后半角空一格 */
 }
 
 /* 摘要部分（罗马数字页码区域） */
 .front-matter {
-    page-break-after: always;
+  page-break-after: always;
 }
 
 /* 摘要标题 */
 .abstract-title {
-    font-family: "Microsoft YaHei", "SimHei", sans-serif;
-    font-size: 15pt; /* 小三号 */
-    font-weight: bold;
-    text-align: center;
-    margin: 1em 0;
-    line-height: 1.25;
+  font-family: "Microsoft YaHei", "SimHei", sans-serif;
+  font-size: 15pt; /* 小三号 */
+  font-weight: bold;
+  text-align: center;
+  margin: 1em 0;
+  line-height: 125%;
 }
 
 /* 摘要正文 */
 .abstract-content {
-    font-family: "SimSun", "Times New Roman", serif;
-    font-size: 12pt; /* 小四号 */
-    text-align: justify;
-    text-indent: 2em;
-    line-height: 1.25;
-    margin: 0;
+  font-family: "SimSun", "Times New Roman", serif;
+  font-size: 12pt; /* 小四号 */
+  text-align: justify;
+  text-indent: 2em;
+  line-height: 125%;
+  margin: 0;
 }
 
 /* 关键词 */
 .keywords {
-    font-family: "SimSun", "Times New Roman", serif;
-    font-size: 12pt;
-    margin-top: 1em;
-    line-height: 1.25;
+  font-family: "SimSun", "Times New Roman", serif;
+  font-size: 12pt;
+  margin-top: 1em;
+  line-height: 125%;
 }
 
 .keywords-label {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* 目录样式 */
 .toc {
-    font-family: "SimSun", "Times New Roman", serif;
-    font-size: 12pt;
-    line-height: 1.25;
+  font-family: "SimSun", "Times New Roman", serif;
+  font-size: 12pt;
+  line-height: 125%;
 }
 
 .toc-title {
-    font-family: "Microsoft YaHei", "SimHei", sans-serif;
-    font-size: 15pt;
-    font-weight: bold;
-    text-align: center;
-    margin: 1em 0;
+  font-family: "Microsoft YaHei", "SimHei", sans-serif;
+  font-size: 15pt;
+  font-weight: bold;
+  text-align: center;
+  margin: 1em 0;
 }
 
 .toc-item {
-    text-align: justify;
-    margin: 0.5em 0;
+  text-align: justify;
+  margin: 0.5em 0;
 }
 
 /* 三线表格样式 */
 .three-line-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1em 0;
-    font-family: "SimSun", "Times New Roman", serif;
-    font-size: 10.5pt; /* 五号字体 */
-    line-height: 1.25;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-family: "SimSun", "Times New Roman", serif;
+  font-size: 10.5pt; /* 五号字体 */
+  line-height: 125%;
 }
 
 .three-line-table th {
-    border-top: 1.5pt solid #000;
-    border-bottom: 1pt solid #000;
-    padding: 8px;
-    text-align: center;
-    font-weight: bold;
+  border-top: 1.5pt solid #000;
+  border-bottom: 1pt solid #000;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .three-line-table td {
-    border: none;
-    padding: 8px;
-    text-align: center;
+  border: none;
+  padding: 8px;
+  text-align: center;
 }
 
 .three-line-table tbody tr:last-child td {
-    border-bottom: 1.5pt solid #000;
+  border-bottom: 1.5pt solid #000;
 }
 
 /* 参考文献引用样式 */
 .reference-citation {
-    font-family: "SimSun", "Times New Roman", serif;
-    font-size: inherit;
-    vertical-align: super;
-    font-size: 0.8em;
+  font-family: "SimSun", "Times New Roman", serif;
+  font-size: inherit;
+  vertical-align: super;
+  font-size: 0.8em;
 }
 
 /* 参考文献列表 */
 .references {
-    font-family: "SimSun", "Times New Roman", serif;
-    font-size: 10.5pt; /* 五号字体 */
-    line-height: 1.25;
+  font-family: "SimSun", "Times New Roman", serif;
+  font-size: 10.5pt; /* 五号字体 */
+  line-height: 125%;
 }
 
 .reference-item {
-    margin-bottom: 0.5em;
-    text-align: justify;
-    text-indent: -2em;
-    padding-left: 2em;
+  margin-bottom: 0.5em;
+  text-align: justify;
+  text-indent: -2em;
+  padding-left: 2em;
 }
 
 /* 页码样式 */
 .page-number {
-    text-align: center;
-    font-family: "Times New Roman", serif;
-    font-size: 10.5pt;
+  text-align: center;
+  font-family: "Times New Roman", serif;
+  font-size: 10.5pt;
 }
 
 /* 前置部分页码（罗马数字） */
 .roman-page-number {
-    font-style: normal;
+  font-style: normal;
 }
 
 /* 正文部分页码（阿拉伯数字） */
 .arabic-page-number {
-    font-style: normal;
+  font-style: normal;
 }
 
 /* 分节符处理 */
 .section-break {
-    page-break-before: always;
+  page-break-before: always;
 }
 
 /* 打印样式 */
 @media print {
-    .document-container {
-        margin: 0;
-        padding: 2.5cm 2.5cm 2.5cm 3cm;
-        max-width: none;
-    }
-    
-    .heading-1,
-    .heading-2,
-    .heading-3 {
-        page-break-after: avoid;
-        page-break-inside: avoid;
-    }
-    
-    .paragraph {
-        orphans: 2;
-        widows: 2;
-    }
-    
-    .three-line-table {
-        page-break-inside: avoid;
-    }
+  .document-container {
+    margin: 0;
+    padding: 2.5cm 2.5cm 2.5cm 3cm;
+    max-width: none;
+  }
+
+  .heading-1,
+  .heading-2,
+  .heading-3 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  .paragraph {
+    orphans: 2;
+    widows: 2;
+  }
+
+  .three-line-table {
+    page-break-inside: avoid;
+  }
 }
 
 /* 字体大小对照表（注释）

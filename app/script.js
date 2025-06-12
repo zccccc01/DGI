@@ -108,7 +108,7 @@ function loadDefaultCSS() {
 body {
   font-family: "宋体", "Times New Roman", serif;
   font-size: 12pt;
-  line-height: 1.25;
+  line-height: 125%;
   text-align: justify;
   margin: 0;
   padding: 0;
